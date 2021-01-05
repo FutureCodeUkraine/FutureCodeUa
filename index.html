@@ -1,7 +1,4 @@
-
-
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,7 +10,63 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      
+        <div class="order">
+            <div class="closee">
+
+            </div>
+            <div class="menu">
+                <div class="navbar">    
+                    <div class="close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <Style>
+                .order{
+                    z-index: -10;
+                    position: fixed;
+                }
+
+                .order.active{
+                    z-index: 999;
+                    width: 100%;
+                    height: 100vh;
+                    position: fixed;
+                    background: rgba(1, 1, 1, 0.6);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .order.active .menu{
+                    width: 400px;
+                    height: 80vh;
+                    background-color: white;
+                    border-radius: 10px;
+                    z-index: 1001;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+                }
+
+                .order .menu .navbar{
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 15px;
+                }
+
+                .order .menu .navbar .close{
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+
+                .order.active .closee{
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1000;
+                } 
+
+            </Style>
+        </div>
         <div class="welcome">
                 <div class="wlc">
                     <h1>МИ</h1>
@@ -30,7 +83,7 @@
                                 height: 25px;
                                 width: 25px;
                                 color:  rgb(255, 145, 0);
-                                cursor: crosshair;
+                                cursor: pointer;
                             }
 
 
@@ -118,6 +171,9 @@
                             <div class="price">
                                 <h2>ВІД $2</h2>
                             </div>
+                            <div class="buy">
+                                <a><h2>ЗАМОВИТИ</h2></a>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -126,20 +182,22 @@
                             <h3>CREATIVE</h3>
                         </div>
                         <div class="contentc">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iure qui consequuntur nisi veniam eligendi sint, enim voluptatibus, earum commodi deserunt dolorem cum doloremque atque, ipsum officia! Labore, reiciendis sequi.
-                            </p>
+                            <h2>ВІД $4</h2>
+                            <div class="buy">
+                                <a><h2>ЗАМОВИТИ</h2></a>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="imgBX">
                             <img src="03.png" width="150px">
-                            <h3>CREATIVE</h3>
+                            <h3>CREATIVE +</h3>
                         </div>
                         <div class="contentc">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iure qui consequuntur nisi veniam eligendi sint, enim voluptatibus, earum commodi deserunt dolorem cum doloremque atque, ipsum officia! Labore, reiciendis sequi.
-                            </p>
+                            <h2>ВІД $6</h2>
+                            <div class="buy">
+                                <a><h2>ЗАМОВИТИ</h2></a>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -148,9 +206,10 @@
                             <h3>SPECIAL</h3>
                         </div>
                         <div class="contentc">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iure qui consequuntur nisi veniam eligendi sint, enim voluptatibus, earum commodi deserunt dolorem cum doloremque atque, ipsum officia! Labore, reiciendis sequi.
-                            </p>
+                            <h2>ВІД $8</h2>
+                            <div class="buy">
+                                <a><h2>ЗАМОВИТИ</h2></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,6 +223,10 @@
                     text-align: center;
                     overflow: hidden;
                     display: flex;
+                }
+
+                .prices{
+                    display: block;
                 }
                 .cards{
                     margin-top: 170px;
@@ -268,6 +331,26 @@
                     transform: translateY(-40px);
                 }
 
+
+                .cards .card .buy{
+                    background-color: #FF9100;
+                    height: 75px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    color: #ffffff;
+                    transition: 0.3s linear;
+                    cursor: pointer;
+                }
+
+                .cards .card .buy:hover{
+                    background: #e68302;
+                }
+
+                .cards .card .buy h2{
+                    color: #ffffff;
+                }
+
                 @media screen and (max-width: 910px){
                     .cards{
                         width: 400px;
@@ -366,9 +449,25 @@
         </div>
         <script>
             $(document).ready(function(){
-                $('.australl').click(function(){
-                    $(this).toggleClass("active");
-                    $("body").toggleClass("active");
+                $('.buy').click(function(){
+                    $(this).addClass("active");
+                    $(".order").addClass("active");
+                    });
+                });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('.close').click(function(){
+                    $(this).removeClass("active");
+                    $(".order").removeClass("active");
+                    });
+                });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('.closee').click(function(){
+                    $(this).removeClass("active");
+                    $(".order").removeClass("active");
                     });
                 });
         </script>
@@ -384,6 +483,7 @@
             ::-webkit-scrollbar-thumb {
             background: linear-gradient(#1E1E1E, #FF9100);
             border-radius: 6px;
+            
             transition: 0.7s linear;
             }
 
@@ -627,5 +727,11 @@ li{
 
 
         </style>
+<script>
+  addEventListener("keydown", function(event) {
+    if (event.keyCode == 27)
+    $(".order").removeClass("active");
+  });
+</script>
     </body>
 </html>
