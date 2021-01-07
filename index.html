@@ -15,16 +15,223 @@
 
             </div>
             <div class="menu">
-                <div class="navbar">    
-                    <div class="close">
-                        <i class="fas fa-times"></i>
+                <div class="navbar">
+                    <div class="bloc"></div>
+                    <div class="bloc"><h2>ЗАМОВИТИ</h2></div>
+                    <style>
+                        .bloc h2{
+                            margin: 0;
+                        }
+                    </style>
+                    <div class="bloc x">
+                        <div class="close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>  
+                </div>
+                <div class="contentb">
+                    <div class="heade">
+                        <h2>ОБЕРІТЬ СВІЙ ТАРИФ</h2>
                     </div>
+                    <style>
+                        .heade{
+                            display: flex;
+                            justify-content: center;
+                        }
+
+
+                        .heade h2{
+                            margin: 15px 0;
+                        }
+                    </style>
+                    <div class="tariff">
+                        <div class="listbox">
+                            <div class="lisTT">
+                                <div class="lbox st">STANDART</div>
+                                <div class="lbox sta">CREATIVE</div>
+                                <div class="lbox stb">CREATIVE+</div>
+                                <div class="lbox stc">SPECIAL</div>
+                            </div>
+                        </div>
+                        <div class="tariffcl">
+                            <div class="tarrif tf"><h3>ТАРИФ "STANDART"</h3></div>
+                            <div class="tarrif ts"><h3>ТАРИФ "CREATIVE"</h3></div>
+                            <div class="tarrif tt"><h3>ТАРИФ "CREATIVE +"</h3></div>
+                            <div class="tarrif to"><h3>ТАРИФ "SPECIAL"</h3></div>
+                        </div>
+                        <style>
+                            .tarrif{
+                                display: flex;
+                                justify-content: center;
+                                text-align: center;
+                                transition: 0.4s;
+                            }
+                            .tariff h3{
+                                margin: 0;
+                                margin-top: 5px;
+                                transition: 0.4s;
+                            }
+                        </style>
+                    </div>
+                    <script>
+                $(document).ready(function(){
+                    $('.ba').click(function(){
+                        $(".ts").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(".st").addClass("active");
+                        $(".tf").addClass("active");
+                        
+                        });
+                });
+
+                $(document).ready(function(){
+                    $('.bb').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(".sta").addClass("active");
+                        $(".ts").addClass("active");
+                        });
+                });
+
+
+
+                $(document).ready(function(){
+                    $('.bc').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".ts").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(".stb").addClass("active");
+                        $(".tt").addClass("active");
+                        });
+                });
+
+
+                $(document).ready(function(){
+                    $('.bd').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".ts").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(".stc").addClass("active");
+                        $(".to").addClass("active");
+                        });
+                });
+                    </script>
+                    <style>
+                        .tariff{
+                            width: 100%;
+                        }
+                        .tariff .tariffcl{
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+
+                        .tariff .tariffcl .tarrif{
+                            width: 0px;
+                            height: 0px;
+                            display: none;
+                        }
+
+
+                        .tariff .tariffcl .tarrif.active{
+                            width: 87%;
+                            height: 250px;
+                            border: 2px solid grey;
+                            border-radius: 8px;
+                            margin-top: 10px;
+                            display: block;
+                        }
+
+                        .tariff .listbox{
+                            display: flex;
+                            justify-content: center;
+                            margin: 0;
+                        }
+
+                        .tariff .listbox .lisTT{
+                            display: flex;
+                        }
+
+                        .tariff .listbox .lisTT .lbox{
+                            margin: 0px 7px;
+                            padding: 5px;
+                            border: 2px solid grey;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            transition: 0.4s;
+                        }
+
+                        .tariff .listbox .lisTT .lbox.active{
+                            color: rgb(255, 145, 0);
+                            border: 2px solid rgb(255, 145, 0);
+                        }
+                    </style>
+                    <script>
+                $(document).ready(function(){
+                    $('.st').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".ts").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(this).addClass("active");
+                        $(".tf").addClass("active");
+                        
+                        });
+                });
+
+                $(document).ready(function(){
+                    $('.sta').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".ts").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(this).addClass("active");
+                        $(".ts").addClass("active");
+                        
+                        });
+                });
+
+                $(document).ready(function(){
+                    $('.stb').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".ts").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(this).addClass("active");
+                        $(".tt").addClass("active");
+                        
+                        });
+                });
+
+                $(document).ready(function(){
+                    $('.stc').click(function(){
+                        $(".tf").removeClass("active");
+                        $(".ts").removeClass("active");
+                        $(".tt").removeClass("active");
+                        $(".to").removeClass("active");
+                        $(".lbox").removeClass("active");
+                        $(this).addClass("active");
+                        $(".to").addClass("active");
+                        
+                        });
+                });
+                    </script>
                 </div>
             </div>
             <Style>
                 .order{
                     z-index: -10;
                     position: fixed;
+
                 }
 
                 .order.active{
@@ -49,8 +256,26 @@
 
                 .order .menu .navbar{
                     display: flex;
+                    padding: 0 15px;
+                    margin-top: 15px;
+                }
+
+                .order .menu .navbar .bloc{
+                    width: 33%;
+                    display: flex;
+                    justify-content: center;
+
+                }
+
+
+                .order .menu .navbar .bloc h2{
+                    margin: 0;
+                }
+                
+
+                .order .menu .navbar .bloc.x{
                     justify-content: flex-end;
-                    padding: 15px;
+                    display: flex;
                 }
 
                 .order .menu .navbar .close{
@@ -171,7 +396,7 @@
                             <div class="price">
                                 <h2>ВІД $2</h2>
                             </div>
-                            <div class="buy">
+                            <div class="buy ba">
                                 <a><h2>ЗАМОВИТИ</h2></a>
                             </div>
                         </div>
@@ -183,7 +408,7 @@
                         </div>
                         <div class="contentc">
                             <h2>ВІД $4</h2>
-                            <div class="buy">
+                            <div class="buy bb">
                                 <a><h2>ЗАМОВИТИ</h2></a>
                             </div>
                         </div>
@@ -195,7 +420,7 @@
                         </div>
                         <div class="contentc">
                             <h2>ВІД $6</h2>
-                            <div class="buy">
+                            <div class="buy bc">
                                 <a><h2>ЗАМОВИТИ</h2></a>
                             </div>
                         </div>
@@ -207,7 +432,7 @@
                         </div>
                         <div class="contentc">
                             <h2>ВІД $8</h2>
-                            <div class="buy">
+                            <div class="buy bd">
                                 <a><h2>ЗАМОВИТИ</h2></a>
                             </div>
                         </div>
@@ -457,6 +682,13 @@
         </script>
         <script>
             $(document).ready(function(){
+                $('.buy').click(function(){
+                    $("body").addClass("noscroll");
+                    });
+                });
+        </script>
+        <script>
+            $(document).ready(function(){
                 $('.close').click(function(){
                     $(this).removeClass("active");
                     $(".order").removeClass("active");
@@ -508,6 +740,11 @@ body.active{
 body{
     padding: 0;
     margin: 0;
+}
+
+
+body.noscroll{
+    overflow: none;
 }
 
 .welcome{
