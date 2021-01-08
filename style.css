@@ -118,23 +118,6 @@ margin-bottom: 20px;
 }
 
 
-.welcome .wlc a{
-text-decoration: none;
-padding: 5px;
-border: 3px solid rgb(255, 145, 0);
-border-radius: 8px;
-font-size: 25px;
-transition: all 0.7s linear;
-z-index: 999;
-margin-right: 15px;
-}
-
-
-.welcome .wlc a:hover{
-color: white;
-border: 3px solid white;
-background-color: rgb(255, 145, 0);
-}
 
 .about{
 background-color: rgb(233, 233, 233);
@@ -167,6 +150,7 @@ background-color: #1E1E1E;
 height: 100vh;
 align-content: center;
 text-align: center;
+margin-top: 0;
 }
 
 .benefits h1{
