@@ -298,28 +298,45 @@
                     <h1>МИ</h1>
                     <h2>РОЗРОБКА САЙТІВ НА ЗАМОВЛЕННЯ</h2>
                     <div class="social">
-                        <a><i class="fab fa-instagram soc"></i></a>
-                        <a><i class="fab fa-facebook soc"></i></a>
-                        <a><i class="fab fa-youtube soc"></i></a>
-                        <a><i class="fab fa-discord soc"></i></a>
+                        <a><i class="fab fa-instagram socialb"></i></a>
+                        <a><i class="fab fa-facebook socialb"></i></a>
+                        <a><i class="fab fa-youtube socialb"></i></a>
+                        <a><i class="fab fa-discord socialb"></i></a>
                         <style>
-
-                            .social .soc{
-                                padding: 5px;
-                                height: 25px;
-                                width: 25px;
-                                color:  rgb(255, 145, 0);
-                                cursor: pointer;
+                            .welcome .wlc a{
+                            text-decoration: none;
+                            padding: 5px;
+                            border: 3px solid rgb(255, 145, 0);
+                            border-radius: 8px;
+                            font-size: 25px;
+                            transition: all 0.7s linear;
+                            z-index: 999;
+                            margin-right: 15px;
+                            width: 25px;
+                            height: 25px;
+                            justify-content: center;
+                            display: flex;
+                            align-items: center;
                             }
 
 
-                            .social .soc:hover{
-                                padding: 5px;
-                                height: 25px;
-                                width: 25px;
-                                color:  rgb(255, 255, 255);
-                                transition: all 0.7s linear;
+                            .welcome .wlc a:hover{
+                            color: white;
+                            border: 3px solid white;
+                            background-color: rgb(255, 145, 0);
                             }
+
+                            .welcome .wlc .social{
+                                display: flex;
+                            }
+
+
+                            .welcome .wlc .social a .socialb{
+                                color: #ffffff;
+                            }
+
+
+
                         </style>
                     </div>
             </div>
@@ -368,6 +385,50 @@
                 <p>sasskdjdsn</p>
             </div>
         </div>
+        <div class="btwblock">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="wave black" fill="#1e1e1e" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,245.3C384,277,480,299,576,293.3C672,288,768,256,864,224C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+              </svg>
+            <div class="backgr">
+
+            </div>
+        </div>
+        <style>
+            .btwblock{
+                background-color: rgb(233, 233, 233);
+                margin: 0;
+            }
+
+
+            .btwblock.org{
+                background-color: rgb(255, 145, 0);
+            }
+
+            .btwblock .wave.black{
+                margin: 0;
+                margin-bottom: -10px;
+                height: 20vh;
+            }
+
+            .btwblock .backgr{
+                background-color: #1e1e1e;
+                height: 10px;
+                position: absolute;
+                display: block;
+                width: 100%;
+                margin-top: -10px;
+            }
+
+
+            .btwblock .backgr.org{
+                background-color: #FF9100;
+                height: 10px;
+                position: absolute;
+                display: block;
+                width: 100%;
+                margin-top: -10px;
+            }
+        </style>
         <div class="benefits">
             <div class="content">
                 <h1>ПЕРЕВАГИ</h1>
@@ -378,6 +439,11 @@
                 </div>
                 <p>sasskdjdsn</p>
             </div>
+        </div>
+        <div class="btwblock">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="wave black" fill="#1e1e1e" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,138.7C384,149,480,171,576,160C672,149,768,107,864,96C960,85,1056,107,1152,101.3C1248,96,1344,64,1392,48L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+              </svg>
         </div>
         <div class="howork">
             <div class="content">
@@ -390,13 +456,22 @@
                 <p>sasskdjdsn</p>
             </div>
         </div>
+        <div class="btwblock">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="wave black" fill="#FF9100" fill-opacity="1" d="M0,64L48,85.3C96,107,192,149,288,165.3C384,181,480,171,576,192C672,213,768,267,864,293.3C960,320,1056,320,1152,304C1248,288,1344,256,1392,240L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+              </svg>
+            <div class="backgr org">
+
+            </div>
+        </div>
+        
         <div class="buyblock">
             <div class="contentbuy">
             <canvas id="canvas"></canvas>
           <style>
               body {
   width: 100%;
-  height: 35vh;
+  height: 37vh;
 }
 #canvas {
   display: block;
@@ -418,7 +493,7 @@ class Visual {
     this.canvasHeight = 0;
     this.particleLength = 150;
     this.particles = [];
-    this.particleMaxRadius = 8;
+    this.particleMaxRadius = 15;
 
     this.handleMouseMoveBind = this.handleMouseMove.bind(this);
     this.handleClickBind = this.handleClick.bind(this);
@@ -589,6 +664,7 @@ new Visual();
                 color: white;
                 position: absolute;
                 cursor: pointer;
+                transition: 0.6s linear;
             }
 
             .btn p{
@@ -597,13 +673,23 @@ new Visual();
                 padding: 10px 25px;
                 border-radius: 10px;
                 transition: 0.s linear;
+                transition: 0.6s linear;
             }
 
             .btn:hover p{
                 transform: scale(1.1);
+                transition: 0.6s linear;
             }
 
         </style>
+        <div class="btwblock org">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="wave black" fill="#1e1e1e" fill-opacity="1" d="M0,0L48,16C96,32,192,64,288,69.3C384,75,480,53,576,80C672,107,768,181,864,202.7C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+              </svg>
+            <div class="backgr">
+
+            </div>
+        </div>
         <div class="services">
             <div class="content">
                 <h1>ПОСЛУГИ</h1>
@@ -640,7 +726,13 @@ new Visual();
                 </div>
             </div>
         </div>
-        
+        <div class="btwblock">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="wave black" fill="#1e1e1e" fill-opacity="1" d="M0,32L30,48C60,64,120,96,180,106.7C240,117,300,107,360,117.3C420,128,480,160,540,181.3C600,203,660,213,720,213.3C780,213,840,203,900,192C960,181,1020,171,1080,165.3C1140,160,1200,160,1260,160C1320,160,1380,160,1410,160L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+              </svg>
+        </div>
+        <style>
+        </style>
         <div class="prices">
             <h1>ЦІНИ</h1>
             <div class="underheader">
@@ -705,7 +797,7 @@ new Visual();
             <style>
                 .contentpr{
                     background-color: rgb(233, 233, 233);
-                    min-height: 100vh;
+                    min-height: 92vh;
                     justify-content: center;
                     align-content: center;
                     text-align: center;
