@@ -42,22 +42,22 @@ overflow: none;
 }
 
 .welcome{
-height: 100vh;
+min-height: 100vh;
 width: 100%;
 background-color: black;
 background: url(bg.jpg);
 background-size: cover;
 background-attachment: fixed;
-display: flex;
+display: block;
 text-align: left;
 }
 
 .welcome .wlc{
 align-items: center;
 justify-content: center;
-text-align: left;
-padding: 0 25px;
-margin-top: 320px;
+height: 100vh;
+display: flex
+;
 }
 
 .welcome .wlc h1{
